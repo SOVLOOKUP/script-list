@@ -1,6 +1,5 @@
- 
-def main():
-    return {
+import json
+a =  json.dumps({
 	"id": "111111111112",
 	"taskname": "测试任务",
 	"author": "安伟",
@@ -43,4 +42,10 @@ def main():
 			]
 		}
 	]
-}
+})
+def main():
+	with open("./config.json","w+") as f:
+		f.write(a)
+
+if __name__ == "__main__":
+	main()
