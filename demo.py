@@ -45,9 +45,10 @@ a =  json.dumps({
 })
 def main():
 	# 接受工作路径
-	print(sys.argv[-1])
+	wordir = sys.argv[-1]
+	print(wordir)
 	# 写入结果
-	with open("./config.json","w+") as f:
+	with open(wordir + "/config.json","w+") as f:
 		f.write(a)
 
 if __name__ == "__main__":
